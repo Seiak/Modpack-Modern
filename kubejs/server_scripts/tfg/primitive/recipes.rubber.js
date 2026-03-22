@@ -130,6 +130,13 @@ function registerTFGRubberRecipes(event) {
 		.duration(5 * 20)
 		.EUt(7)
 	
+    // Liquid Rubber
+	event.recipes.gtceu.chemical_reactor('tfg:liquid_rubber_from_sulfur_powder')
+    .itemInputs('9x gtceu:raw_rubber_dust', '4x tfc:powder/sulfur')
+    .outputFluids(Fluid.of('gtceu:rubber', 1296))
+    .duration(600)
+    .EUt(16)
+	
 	// Rubber Processing Line
 	event.recipes.tfc.pot('tfc:powder/sulfur', Fluid.of('tfg:latex', 1000), 1200, 300)
 		.fluidOutput(Fluid.of('tfg:vulcanized_latex', 1000))
